@@ -27,7 +27,6 @@ window.onload = () => {
   nameGenerator();
 
   let app = document.querySelector("#app");
-  app.style.border = "1px solid red";
 
   let h1 = document.createElement("h1");
   h1.textContent = "Domain Name Generator";
