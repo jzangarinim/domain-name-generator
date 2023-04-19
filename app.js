@@ -34,12 +34,25 @@ window.onload = () => {
   h1.style.textAlign = "center";
   h1.style.fontSize = "24px";
 
-  let ul = document.createElement("ul");
-  app.appendChild(ul);
+  let tables = document.createElement("div");
+  app.appendChild(tables);
+  tables.style.display = "flex";
+  tables.style.justifyContent = "center";
+  let ol = document.createElement("ol");
+  let ol2 = document.createElement("ol");
+  ol2.start = domainsArray.length / 2 + 1;
+  tables.appendChild(ol);
+  tables.appendChild(ol2);
 
-  for (let i = 0; i < domainsArray.length; i++) {
+  for (let i = 0; i < domainsArray.length / 2; i++) {
     let li = document.createElement("li");
-    ul.appendChild(li);
+    ol.appendChild(li);
     li.textContent = domainsArray[i];
+  }
+
+  for (let j = domainsArray.length / 2; j < domainsArray.length; j++) {
+    let li = document.createElement("li");
+    ol2.appendChild(li);
+    li.textContent = domainsArray[j];
   }
 };
